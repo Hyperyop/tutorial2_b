@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 	struct sockaddr_in from;
 	memset(&from, 0, sizeof(from));
 	from.sin_family = AF_INET;
-	inet_pton(AF_INET,"127.0.0.1",&from.sin_addr.s_addr);
+	inet_pton(AF_INET,IP,&from.sin_addr.s_addr);
 	from.sin_port = htons(atoi(port));
 	int sockfrom = socket(AF_INET, SOCK_DGRAM, 0);
     if (bind(sockfrom,(struct sockaddr*)&from, sizeof(from))){
