@@ -38,7 +38,6 @@ int main(int argc, char* argv[])
         fprintf(stderr, "Error creating thread\n");
         return 1;
     	}
-    printf("hello\n");
     sendtosocket();
 	return (0);
 }

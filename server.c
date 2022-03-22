@@ -64,7 +64,7 @@ void *echo(void *args){
 	int bytes_sent = sendto(sockfd, data_received, strlen(data_received), 0,
            (struct sockaddr*)&from, sizeofsocket);
 
-	printf("Thread number %ld, working on counter. The received data is %s\n", (long)pthread_self(), data_received);
+	printf("Thread number %ld. The received data is %s\n", (long)pthread_self(), data_received);
 	pthread_mutex_unlock(&writelock);
 	}
 	return NULL;
